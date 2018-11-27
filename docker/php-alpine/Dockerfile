@@ -26,6 +26,7 @@ RUN apk update \
         unzip \
         composer \
         nodejs \
+        bash \
     && docker-php-ext-install \
         curl \
         iconv \
