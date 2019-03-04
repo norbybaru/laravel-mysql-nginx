@@ -20,13 +20,14 @@ RUN apk update \
         imagemagick \
         mysql-client \
         libintl \
+    libpng-dev \
         icu-dev \
         icu \
         vim \
         unzip \
         composer \
         nodejs \
-        bash \
+        bash > /dev/null \
     && docker-php-ext-install \
         curl \
         iconv \
@@ -42,6 +43,7 @@ RUN apk update \
         ctype \
         bcmath \
         json \
+        gd > /dev/null \
     && pecl install imagick \
     && docker-php-ext-enable \
         imagick \
